@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kit completo para desarrollar buyer personas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Kit completo para desarrollar buyer personas</h1>
+            <div class="project-info">
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label for="proyecto">Proyecto:</label>
+                        <input type="text" id="proyecto" name="proyecto">
+                    </div>
+                    <div class="info-item">
+                        <label for="fecha">Fecha:</label>
+                        <input type="date" id="fecha" name="fecha">
+                    </div>
+                    <div class="info-item">
+                        <label for="equipo">Equipo:</label>
+                        <input type="text" id="equipo" name="equipo">
+                    </div>
+                    <div class="info-item">
+                        <label for="objetivo">Objetivo:</label>
+                        <input type="text" id="objetivo" name="objetivo">
+                    </div>
+                    <div class="info-item">
+                        <label for="num-personas">Número de personas a crear:</label>
+                        <input type="number" id="num-personas" name="num-personas" min="1">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="section" id="proposito">
+            <h2>Definición del Propósito</h2>
+            <div class="form-group">
+                <h3>¿Por qué estamos creando estas personas?</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="proposito" value="desarrollo-producto"> Desarrollo de producto</label>
+                    <label><input type="checkbox" name="proposito" value="estrategia-marketing"> Estrategia de marketing</label>
+                    <label><input type="checkbox" name="proposito" value="mejora-ux"> Mejora de UX/UI</label>
+                    <label><input type="checkbox" name="proposito" value="ventas-conversion"> Ventas y conversión</label>
+                    <label><input type="checkbox" name="proposito" value="estrategia-contenido"> Estrategia de contenido</label>
+                    <label>
+                        <input type="checkbox" name="proposito" value="otro"> Otro:
+                        <input type="text" id="proposito-otro" name="proposito-otro" placeholder="Especificar">
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="como-usar">¿Cómo se usarán estas personas?</label>
+                <textarea id="como-usar" name="como-usar" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="criterios-exito">Criterios de éxito:</label>
+                <textarea id="criterios-exito" name="criterios-exito" rows="3"></textarea>
+            </div>
+        </section>
+
+        <section class="section" id="persona-principal">
+            <h2>PERSONA PRINCIPAL</h2>
+
+            <div class="subsection">
+                <h3>Información Básica</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="edad">Edad:</label>
+                        <input type="number" id="edad" name="edad" min="0" max="120">
+                    </div>
+                    <div class="form-group">
+                        <label for="ubicacion">Ubicación:</label>
+                        <input type="text" id="ubicacion" name="ubicacion">
+                    </div>
+                    <div class="form-group">
+                        <label for="estado-civil">Estado civil:</label>
+                        <select id="estado-civil" name="estado-civil">
+                            <option value="">Seleccionar</option>
+                            <option value="soltero">Soltero/a</option>
+                            <option value="casado">Casado/a</option>
+                            <option value="divorciado">Divorciado/a</option>
+                            <option value="viudo">Viudo/a</option>
+                            <option value="union-libre">Unión libre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ingresos">Ingresos:</label>
+                        <input type="text" id="ingresos" name="ingresos" placeholder="Ej: $50,000 - $75,000">
+                    </div>
+                    <div class="form-group">
+                        <label for="foto">Foto:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="foto" value="adjuntada"> Adjuntada</label>
+                            <label><input type="radio" name="foto" value="por-seleccionar"> Por seleccionar</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Información Profesional</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="ocupacion">Ocupación/Cargo:</label>
+                        <input type="text" id="ocupacion" name="ocupacion">
+                    </div>
+                    <div class="form-group">
+                        <label for="industria">Industria:</label>
+                        <input type="text" id="industria" name="industria">
+                    </div>
+                    <div class="form-group">
+                        <label for="tamano-empresa">Tamaño de empresa:</label>
+                        <select id="tamano-empresa" name="tamano-empresa">
+                            <option value="">Seleccionar</option>
+                            <option value="startup">Startup (1-10 empleados)</option>
+                            <option value="pequena">Pequeña (11-50 empleados)</option>
+                            <option value="mediana">Mediana (51-200 empleados)</option>
+                            <option value="grande">Grande (201-1000 empleados)</option>
+                            <option value="corporacion">Corporación (1000+ empleados)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="anos-experiencia">Años de experiencia:</label>
+                        <input type="number" id="anos-experiencia" name="anos-experiencia" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="nivel-responsabilidad">Nivel de responsabilidad:</label>
+                        <select id="nivel-responsabilidad" name="nivel-responsabilidad">
+                            <option value="">Seleccionar</option>
+                            <option value="junior">Junior</option>
+                            <option value="mid">Mid-level</option>
+                            <option value="senior">Senior</option>
+                            <option value="lead">Lead/Manager</option>
+                            <option value="director">Director</option>
+                            <option value="ejecutivo">Ejecutivo</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="herramientas">Herramientas que usa diariamente:</label>
+                        <textarea id="herramientas" name="herramientas" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Perfil Psicográfico</h3>
+                <h4>Personalidad (marca del 1 al 5):</h4>
+                <div class="personality-scales">
+                    <div class="scale-item">
+                        <span>Extrovertido</span>
+                        <div class="scale">
+                            <input type="range" id="extrovertido" name="extrovertido" min="1" max="5" value="3">
+                            <div class="scale-labels">
+                                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                            </div>
+                        </div>
+                        <span>Introvertido</span>
+                    </div>
+                    <div class="scale-item">
+                        <span>Conservador</span>
+                        <div class="scale">
+                            <input type="range" id="conservador" name="conservador" min="1" max="5" value="3">
+                            <div class="scale-labels">
+                                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                            </div>
+                        </div>
+                        <span>Innovador</span>
+                    </div>
+                    <div class="scale-item">
+                        <span>Independiente</span>
+                        <div class="scale">
+                            <input type="range" id="independiente" name="independiente" min="1" max="5" value="3">
+                            <div class="scale-labels">
+                                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                            </div>
+                        </div>
+                        <span>Colaborativo</span>
+                    </div>
+                    <div class="scale-item">
+                        <span>Orientado a detalles</span>
+                        <div class="scale">
+                            <input type="range" id="detalles" name="detalles" min="1" max="5" value="3">
+                            <div class="scale-labels">
+                                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                            </div>
+                        </div>
+                        <span>Visionario</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h4>Valores Principales:</h4>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="valores" value="seguridad"> Seguridad</label>
+                        <label><input type="checkbox" name="valores" value="innovacion"> Innovación</label>
+                        <label><input type="checkbox" name="valores" value="eficiencia"> Eficiencia</label>
+                        <label><input type="checkbox" name="valores" value="calidad"> Calidad</label>
+                        <label><input type="checkbox" name="valores" value="ahorro"> Ahorro</label>
+                        <label><input type="checkbox" name="valores" value="estatus"> Estatus</label>
+                        <label><input type="checkbox" name="valores" value="simplicidad"> Simplicidad</label>
+                        <label><input type="checkbox" name="valores" value="control"> Control</label>
+                        <label><input type="checkbox" name="valores" value="flexibilidad"> Flexibilidad</label>
+                        <label><input type="checkbox" name="valores" value="reconocimiento"> Reconocimiento</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="intereses">Intereses y Hobbies:</label>
+                    <textarea id="intereses" name="intereses" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Objetivos y Motivaciones</h3>
+                <div class="form-group">
+                    <label for="objetivos-profesionales">Objetivos Profesionales:</label>
+                    <textarea id="objetivos-profesionales" name="objetivos-profesionales" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="objetivos-personales">Objetivos Personales:</label>
+                    <textarea id="objetivos-personales" name="objetivos-personales" rows="3"></textarea>
+                </div>
+
+                <h4>Motivaciones Principales:</h4>
+                <div class="form-group">
+                    <label for="que-impulsa">¿Qué lo impulsa a actuar?</label>
+                    <textarea id="que-impulsa" name="que-impulsa" rows="2"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="que-inspira">¿Qué lo inspira?</label>
+                    <textarea id="que-inspira" name="que-inspira" rows="2"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="que-lograr">¿Qué quiere lograr?</label>
+                    <textarea id="que-lograr" name="que-lograr" rows="2"></textarea>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Frustraciones y Desafíos</h3>
+                <div class="form-group">
+                    <label for="desafios-profesionales">Desafíos Profesionales:</label>
+                    <textarea id="desafios-profesionales" name="desafios-profesionales" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="desafios-productos">Desafíos con Productos/Servicios Actuales:</label>
+                    <textarea id="desafios-productos" name="desafios-productos" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="barreras-exito">Barreras para el Éxito:</label>
+                    <textarea id="barreras-exito" name="barreras-exito" rows="3"></textarea>
+                </div>
+
+                <h4>Principales Frustraciones:</h4>
+                <div class="form-group">
+                    <label for="que-molesta">¿Qué lo molesta más en su día a día?</label>
+                    <textarea id="que-molesta" name="que-molesta" rows="2"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="que-quita-tiempo">¿Qué le quita tiempo innecesariamente?</label>
+                    <textarea id="que-quita-tiempo" name="que-quita-tiempo" rows="2"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="que-estresa">¿Qué lo estresa o le genera ansiedad?</label>
+                    <textarea id="que-estresa" name="que-estresa" rows="2"></textarea>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Comportamiento de Compra</h3>
+                <h4>Proceso de Decisión:</h4>
+                <div class="form-group">
+                    <label>Tipo de comprador:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="tipo-comprador" value="impulsivo"> Impulsivo</label>
+                        <label><input type="radio" name="tipo-comprador" value="analitico"> Analítico</label>
+                        <label><input type="radio" name="tipo-comprador" value="delegador"> Delegador</label>
+                        <label><input type="radio" name="tipo-comprador" value="consenso"> Consenso</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Tiempo de decisión:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="tiempo-decision" value="inmediato"> Inmediato</label>
+                        <label><input type="radio" name="tiempo-decision" value="dias"> Días</label>
+                        <label><input type="radio" name="tiempo-decision" value="semanas"> Semanas</label>
+                        <label><input type="radio" name="tiempo-decision" value="meses"> Meses</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="influenciadores">Influenciadores:</label>
+                    <textarea id="influenciadores" name="influenciadores" rows="2"></textarea>
+                </div>
+
+                <h4>Presupuesto y Pricing:</h4>
+                <div class="form-group">
+                    <label for="rango-presupuesto">Rango de presupuesto:</label>
+                    <div class="budget-range">
+                        <input type="text" id="presupuesto-min" name="presupuesto-min" placeholder="$">
+                        <span>-</span>
+                        <input type="text" id="presupuesto-max" name="presupuesto-max" placeholder="$">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Sensibilidad al precio:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="sensibilidad-precio" value="alta"> Alta</label>
+                        <label><input type="radio" name="sensibilidad-precio" value="media"> Media</label>
+                        <label><input type="radio" name="sensibilidad-precio" value="baja"> Baja</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h4>Factores de decisión más importantes:</h4>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="factores-decision" value="precio"> Precio</label>
+                        <label><input type="checkbox" name="factores-decision" value="calidad"> Calidad</label>
+                        <label><input type="checkbox" name="factores-decision" value="funcionalidad"> Funcionalidad</label>
+                        <label><input type="checkbox" name="factores-decision" value="soporte"> Soporte</label>
+                        <label><input type="checkbox" name="factores-decision" value="marca"> Marca/Reputación</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h4>Canales Preferidos de Compra:</h4>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="canales-compra" value="online"> Online (e-commerce)</label>
+                        <label><input type="checkbox" name="canales-compra" value="fisico"> Físico/Presencial</label>
+                        <label><input type="checkbox" name="canales-compra" value="telefono"> Teléfono</label>
+                        <label><input type="checkbox" name="canales-compra" value="email"> Email</label>
+                        <label><input type="checkbox" name="canales-compra" value="marketplace"> Marketplace (Amazon, etc.)</label>
+                        <label><input type="checkbox" name="canales-compra" value="distribuidores"> Distribuidores/Resellers</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Hábitos Digitales</h3>
+                <h4>Uso de Tecnología:</h4>
+                <div class="form-group">
+                    <label>Dispositivos principales:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="dispositivos" value="smartphone"> Smartphone</label>
+                        <label><input type="checkbox" name="dispositivos" value="laptop"> Laptop/PC</label>
+                        <label><input type="checkbox" name="dispositivos" value="tablet"> Tablet</label>
+                        <label><input type="checkbox" name="dispositivos" value="smartwatch"> Smartwatch</label>
+                        <label>
+                            <input type="checkbox" name="dispositivos" value="otros"> Otros:
+                            <input type="text" id="dispositivos-otros" name="dispositivos-otros" placeholder="Especificar">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Nivel tecnológico:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="nivel-tecnologico" value="principiante"> Principiante</label>
+                        <label><input type="radio" name="nivel-tecnologico" value="intermedio"> Intermedio</label>
+                        <label><input type="radio" name="nivel-tecnologico" value="avanzado"> Avanzado</label>
+                        <label><input type="radio" name="nivel-tecnologico" value="experto"> Experto</label>
+                    </div>
+                </div>
+
+                <h4>Redes Sociales y Contenido:</h4>
+                <div class="social-media-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Plataforma</th>
+                                <th>Frecuencia</th>
+                                <th>Propósito</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Facebook</td>
+                                <td><input type="text" name="facebook-frecuencia"></td>
+                                <td><input type="text" name="facebook-proposito"></td>
+                            </tr>
+                            <tr>
+                                <td>LinkedIn</td>
+                                <td><input type="text" name="linkedin-frecuencia"></td>
+                                <td><input type="text" name="linkedin-proposito"></td>
+                            </tr>
+                            <tr>
+                                <td>Instagram</td>
+                                <td><input type="text" name="instagram-frecuencia"></td>
+                                <td><input type="text" name="instagram-proposito"></td>
+                            </tr>
+                            <tr>
+                                <td>Twitter/X</td>
+                                <td><input type="text" name="twitter-frecuencia"></td>
+                                <td><input type="text" name="twitter-proposito"></td>
+                            </tr>
+                            <tr>
+                                <td>YouTube</td>
+                                <td><input type="text" name="youtube-frecuencia"></td>
+                                <td><input type="text" name="youtube-proposito"></td>
+                            </tr>
+                            <tr>
+                                <td>TikTok</td>
+                                <td><input type="text" name="tiktok-frecuencia"></td>
+                                <td><input type="text" name="tiktok-proposito"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4>Consumo de Contenido:</h4>
+                <div class="form-group">
+                    <label>Formatos preferidos:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="formatos-contenido" value="articulos"> Artículos/Blogs</label>
+                        <label><input type="checkbox" name="formatos-contenido" value="videos"> Videos</label>
+                        <label><input type="checkbox" name="formatos-contenido" value="podcasts"> Podcasts</label>
+                        <label><input type="checkbox" name="formatos-contenido" value="infografias"> Infografías</label>
+                        <label><input type="checkbox" name="formatos-contenido" value="webinars"> Webinars</label>
+                        <label><input type="checkbox" name="formatos-contenido" value="casos-estudio"> Casos de estudio</label>
+                        <label><input type="checkbox" name="formatos-contenido" value="reviews"> Reviews/Testimonios</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="fuentes-informacion">Fuentes de información confiables:</label>
+                    <textarea id="fuentes-informacion" name="fuentes-informacion" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Comunicación y Soporte</h3>
+                <div class="form-group">
+                    <label for="primer-contacto">Primer contacto:</label>
+                    <input type="text" id="primer-contacto" name="primer-contacto">
+                </div>
+                <div class="form-group">
+                    <label for="seguimiento">Seguimiento:</label>
+                    <input type="text" id="seguimiento" name="seguimiento">
+                </div>
+                <div class="form-group">
+                    <label for="soporte">Soporte:</label>
+                    <input type="text" id="soporte" name="soporte">
+                </div>
+
+                <h4>Estilo de Comunicación:</h4>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="estilo-comunicacion" value="directo"> Directo y conciso</label>
+                    <label><input type="checkbox" name="estilo-comunicacion" value="detallado"> Detallado y explicativo</label>
+                    <label><input type="checkbox" name="estilo-comunicacion" value="visual"> Visual (gráficos, imágenes)</label>
+                    <label><input type="checkbox" name="estilo-comunicacion" value="datos"> Datos y estadísticas</label>
+                    <label><input type="checkbox" name="estilo-comunicacion" value="historias"> Historias y casos de estudio</label>
+                </div>
+
+                <h4>Horarios y Disponibilidad:</h4>
+                <div class="form-group">
+                    <label for="mejor-momento">Mejor momento para contacto:</label>
+                    <input type="text" id="mejor-momento" name="mejor-momento">
+                </div>
+                <div class="form-group">
+                    <label for="zona-horaria">Zona horaria:</label>
+                    <input type="text" id="zona-horaria" name="zona-horaria">
+                </div>
+                <div class="form-group">
+                    <label for="dias-preferidos">Días preferidos:</label>
+                    <input type="text" id="dias-preferidos" name="dias-preferidos">
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Frases y Citas Representativas</h3>
+                <div class="form-group">
+                    <label for="citas-textuales">Citas Textuales (palabras exactas que usa esta persona):</label>
+                    <textarea id="citas-textuales" name="citas-textuales" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="objeciones-comunes">Objeciones Comunes:</label>
+                    <textarea id="objeciones-comunes" name="objeciones-comunes" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="expresiones-tipicas">Expresiones Típicas:</label>
+                    <textarea id="expresiones-tipicas" name="expresiones-tipicas" rows="3"></textarea>
+                </div>
+            </div>
+        </section>
+
+        <div class="action-buttons">
+            <button type="button" id="guardar-borrador" class="btn btn-secondary">Guardar Borrador</button>
+            <button type="button" id="exportar-json" class="btn btn-primary">Exportar JSON</button>
+            <button type="button" id="exportar-pdf" class="btn btn-primary">Exportar PDF</button>
+            <button type="button" id="limpiar-formulario" class="btn btn-danger">Limpiar Formulario</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
